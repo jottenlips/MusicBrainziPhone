@@ -11,6 +11,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var artistProducerSwitch: UISwitch!
@@ -35,8 +37,14 @@ class ViewController: UIViewController {
             print(response.response) // HTTP URL response
             print(response.data)     // server data
             print(response.result)   // result of response serialization
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+            if let result = response.result.value {
+//                let JSON = result
+                let data = JSON(result)
+//                let list = JSON["artist"] as! NSArray
+                print(data["artists"][0]["name"])
             }
         }
     }
