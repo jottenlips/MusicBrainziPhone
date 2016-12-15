@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8078E50DF35823EBBAFF42F1 /* Pods_MusicBrainziPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D8FF686EA61396ECCD348 /* Pods_MusicBrainziPhone.framework */; };
 		9A7CE5F81E01A77C00EB7256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */; };
 		9A7CE5FA1E01A77C00EB7256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CE5F91E01A77C00EB7256 /* ViewController.swift */; };
 		9A7CE5FD1E01A77C00EB7256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */; };
 		9A7CE5FF1E01A77C00EB7256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */; };
 		9A7CE6021E01A77C00EB7256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE6001E01A77C00EB7256 /* LaunchScreen.storyboard */; };
+		9AF3458A1E01D64B00235AE4 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF345891E01D64B00235AE4 /* Auth.swift */; };
+		AD830C3BB9717B4AA736E4FB /* Pods_MusicBrainziPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B1B460D8D3E4CEAF2121AC /* Pods_MusicBrainziPhone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A5E5722904296612726B54C /* Pods-MusicBrainziPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.release.xcconfig"; sourceTree = "<group>"; };
+		63C08D0F39EFAF6C34FC7956 /* Pods-MusicBrainziPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		9A7CE5F41E01A77C00EB7256 /* MusicBrainziPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBrainziPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7CE5F91E01A77C00EB7256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +25,9 @@
 		9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7CE6011E01A77C00EB7256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A7CE6031E01A77C00EB7256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D69D8FF686EA61396ECCD348 /* Pods_MusicBrainziPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBrainziPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA53CDB4B717E79883195749 /* Pods-MusicBrainziPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		9AF345891E01D64B00235AE4 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		A1C13A9478448660F13FF0D0 /* Pods-MusicBrainziPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.release.xcconfig"; sourceTree = "<group>"; };
+		F3B1B460D8D3E4CEAF2121AC /* Pods_MusicBrainziPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBrainziPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,20 +35,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8078E50DF35823EBBAFF42F1 /* Pods_MusicBrainziPhone.framework in Frameworks */,
+				AD830C3BB9717B4AA736E4FB /* Pods_MusicBrainziPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F13DD096CD3A597E4A9FAED /* Pods */ = {
+		498E48821818C67904B92557 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA53CDB4B717E79883195749 /* Pods-MusicBrainziPhone.debug.xcconfig */,
-				4A5E5722904296612726B54C /* Pods-MusicBrainziPhone.release.xcconfig */,
+				F3B1B460D8D3E4CEAF2121AC /* Pods_MusicBrainziPhone.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9A7CE5EB1E01A77B00EB7256 = {
@@ -54,8 +55,8 @@
 			children = (
 				9A7CE5F61E01A77C00EB7256 /* MusicBrainziPhone */,
 				9A7CE5F51E01A77C00EB7256 /* Products */,
-				8F13DD096CD3A597E4A9FAED /* Pods */,
-				FCB0A7F30A7DFCF58A3BA65B /* Frameworks */,
+				AB879D9ABB178FF459EA0D8A /* Pods */,
+				498E48821818C67904B92557 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +71,7 @@
 		9A7CE5F61E01A77C00EB7256 /* MusicBrainziPhone */ = {
 			isa = PBXGroup;
 			children = (
+				9AF345881E01D63300235AE4 /* Auth */,
 				9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */,
 				9A7CE5F91E01A77C00EB7256 /* ViewController.swift */,
 				9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */,
@@ -80,12 +82,22 @@
 			path = MusicBrainziPhone;
 			sourceTree = "<group>";
 		};
-		FCB0A7F30A7DFCF58A3BA65B /* Frameworks */ = {
+		9AF345881E01D63300235AE4 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D69D8FF686EA61396ECCD348 /* Pods_MusicBrainziPhone.framework */,
+				9AF345891E01D64B00235AE4 /* Auth.swift */,
 			);
-			name = Frameworks;
+			name = Auth;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AB879D9ABB178FF459EA0D8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63C08D0F39EFAF6C34FC7956 /* Pods-MusicBrainziPhone.debug.xcconfig */,
+				A1C13A9478448660F13FF0D0 /* Pods-MusicBrainziPhone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,12 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A7CE6061E01A77C00EB7256 /* Build configuration list for PBXNativeTarget "MusicBrainziPhone" */;
 			buildPhases = (
-				DA553664F41AC6215CAA8245 /* [CP] Check Pods Manifest.lock */,
+				50B1038659B0D2038DE30885 /* [CP] Check Pods Manifest.lock */,
 				9A7CE5F01E01A77B00EB7256 /* Sources */,
 				9A7CE5F11E01A77B00EB7256 /* Frameworks */,
 				9A7CE5F21E01A77B00EB7256 /* Resources */,
-				E7F412B0F3F51C7A9545222E /* [CP] Embed Pods Frameworks */,
-				F9E667817B379976825004AB /* [CP] Copy Pods Resources */,
+				04A13857C848B8295DB99473 /* [CP] Embed Pods Frameworks */,
+				CBE190F9D11A2F54B4F7D95A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,22 +171,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DA553664F41AC6215CAA8245 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E7F412B0F3F51C7A9545222E /* [CP] Embed Pods Frameworks */ = {
+		04A13857C848B8295DB99473 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,7 +186,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9E667817B379976825004AB /* [CP] Copy Pods Resources */ = {
+		50B1038659B0D2038DE30885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE190F9D11A2F54B4F7D95A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,6 +225,7 @@
 			files = (
 				9A7CE5FA1E01A77C00EB7256 /* ViewController.swift in Sources */,
 				9A7CE5F81E01A77C00EB7256 /* AppDelegate.swift in Sources */,
+				9AF3458A1E01D64B00235AE4 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +344,7 @@
 		};
 		9A7CE6071E01A77C00EB7256 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA53CDB4B717E79883195749 /* Pods-MusicBrainziPhone.debug.xcconfig */;
+			baseConfigurationReference = 63C08D0F39EFAF6C34FC7956 /* Pods-MusicBrainziPhone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -347,7 +360,7 @@
 		};
 		9A7CE6081E01A77C00EB7256 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A5E5722904296612726B54C /* Pods-MusicBrainziPhone.release.xcconfig */;
+			baseConfigurationReference = A1C13A9478448660F13FF0D0 /* Pods-MusicBrainziPhone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;

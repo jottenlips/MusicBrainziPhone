@@ -8,5 +8,6 @@ target 'MusicBrainziPhone' do
 
   # Pods for MusicBrainziPhone
   pod 'Alamofire', '~> 4.0'
+  pod 'NXOAuth2Client', '~> 1.2.8'
 
 end
