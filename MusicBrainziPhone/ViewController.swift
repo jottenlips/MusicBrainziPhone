@@ -27,16 +27,18 @@ class ViewController: UIViewController {
     
     let BASE_URL = "http://musicbrainz.org/ws/2/"
     let format_query = "?fmt=json&query="
+    
     func getData(searchTerm:String, searchType:String){
-    Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+searchTerm).responseJSON { response in
-    print(response.request)  // original URL request
-    print(response.response) // HTTP URL response
-    print(response.data)     // server data
-    print(response.result)   // result of response serialization
-    if let JSON = response.result.value {
-    print("JSON: \(JSON)")
-    }
-    }
+        let query = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+query!).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
     }
     
     override func viewDidLoad() {
