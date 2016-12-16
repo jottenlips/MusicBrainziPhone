@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
         </scene>
-        <!--Second View Controller Table-->
+        <!--View Controller-->
         <scene sceneID="s04-Su-fUV">
             <objects>
-                <viewController id="n1i-wl-IBF" customClass="SecondViewControllerTable" customModule="MusicBrainziPhone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n1i-wl-IBF" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pYy-08-odg"/>
                         <viewControllerLayoutGuide type="bottom" id="JK9-67-p1s"/>
@@ -117,7 +117,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uqg-bK-k16" id="n4R-Ow-cjT">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -140,10 +140,6 @@
                             <constraint firstAttribute="trailing" secondItem="rpz-i6-V6d" secondAttribute="trailing" id="no2-ac-KyW"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="backToSearchButton" destination="Wxy-s4-rR9" id="avx-gk-EHD"/>
-                        <outlet property="table" destination="rpz-i6-V6d" id="vII-uM-m3I"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbV-XJ-hk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
