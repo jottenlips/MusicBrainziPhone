@@ -18,10 +18,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var artistProducerSwitch: UISwitch!
     @IBOutlet weak var searchField: UITextField!
 
+    @IBOutlet weak var artistSwitch: UISwitch!
+    @IBOutlet weak var albumSwitch: UISwitch!
+    @IBOutlet weak var labelSwitch: UISwitch!
+    
+    
     @IBAction func pressedSearchButton(_ sender: AnyObject) {
+        var searchType = "artist"
+        if (artistSwitch.isOn){
+            searchType = "artist"
+            // call getdata, store JSON in a list variable
+        }
+        if (albumSwitch.isOn){
+            searchType = "release-group"
+            // call getdata, store JSON in a list variable
+        }
+        if (labelSwitch.isOn){
+            searchType = "label"
+            // call getdata, store JSON in a list variable
+        }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
-        Auth().getData(searchTerm: theSearchTerm, searchType: "artist")
+        Auth().getData(searchTerm: theSearchTerm, searchType: searchType)
         }
         print(self.searchField.text!)
     }
