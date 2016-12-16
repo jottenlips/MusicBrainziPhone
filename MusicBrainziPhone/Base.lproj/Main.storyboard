@@ -36,7 +36,7 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="pressedSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fsk-Yx-cDx"/>
-                                    <segue destination="n1i-wl-IBF" kind="show" id="DsF-IR-nlt"/>
+                                    <segue destination="60H-5i-1Wl" kind="show" id="G9q-f1-x63"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1Z-f5-SfL">
@@ -98,55 +98,32 @@
             <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
         </scene>
         <!--The Table View Controller-->
-        <scene sceneID="s04-Su-fUV">
+        <scene sceneID="yJ4-8c-6sd">
             <objects>
-                <viewController id="n1i-wl-IBF" customClass="TheTableViewController" customModule="MusicBrainziPhone" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pYy-08-odg"/>
-                        <viewControllerLayoutGuide type="bottom" id="JK9-67-p1s"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rmm-41-ecT">
+                <tableViewController id="60H-5i-1Wl" customClass="TheTableViewController" customModule="MusicBrainziPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OXR-id-Ylv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-i6-V6d">
-                                <frame key="frameInset" minY="60" width="375" height="607"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uqg-bK-k16">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uqg-bK-k16" id="n4R-Ow-cjT">
-                                            <frame key="frameInset" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxy-s4-rR9">
-                                <frame key="frameInset" minX="16" minY="22" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="E0Z-Hx-G5W"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rpz-i6-V6d" firstAttribute="leading" secondItem="Rmm-41-ecT" secondAttribute="leading" id="GoF-xO-g8b"/>
-                            <constraint firstItem="JK9-67-p1s" firstAttribute="top" secondItem="rpz-i6-V6d" secondAttribute="bottom" id="Hod-tc-hJD"/>
-                            <constraint firstItem="rpz-i6-V6d" firstAttribute="top" secondItem="pYy-08-odg" secondAttribute="bottom" constant="17" id="dze-nu-sjI"/>
-                            <constraint firstAttribute="trailing" secondItem="rpz-i6-V6d" secondAttribute="trailing" id="no2-ac-KyW"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="view" destination="Rmm-41-ecT" id="jS0-3P-yFR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dbV-XJ-hk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NWQ-QC-ud7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NWQ-QC-ud7" id="Mh0-wp-nLl">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="60H-5i-1Wl" id="hiJ-0P-yJY"/>
+                            <outlet property="delegate" destination="60H-5i-1Wl" id="hAE-A7-a4V"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8f-32-NVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="38.23088455772114"/>
+            <point key="canvasLocation" x="866" y="38"/>
         </scene>
     </scenes>
 </document>
