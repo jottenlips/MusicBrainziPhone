@@ -11,6 +11,8 @@ import NXOAuth2Client
 import SwiftyJSON
 import Alamofire
 
+
+
 class Auth{
     
     func getData(searchTerm:String, searchType:String){
@@ -27,9 +29,11 @@ class Auth{
                 //                let JSON = result
                 let data = JSON(result)
                 //                let list = JSON["artist"] as! NSArray
-                print(data["artists"][0])
+                print(data["artists"].count)
             }
         }
     }
+    
+    
 
 }
