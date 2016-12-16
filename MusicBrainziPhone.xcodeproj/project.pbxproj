@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A30A8371E0454E200EF7673 /* TheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A30A8361E0454E200EF7673 /* TheTableViewController.swift */; };
 		9A7CE5F81E01A77C00EB7256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */; };
 		9A7CE5FA1E01A77C00EB7256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CE5F91E01A77C00EB7256 /* ViewController.swift */; };
 		9A7CE5FD1E01A77C00EB7256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		63C08D0F39EFAF6C34FC7956 /* Pods-MusicBrainziPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		9A30A8361E0454E200EF7673 /* TheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheTableViewController.swift; sourceTree = "<group>"; };
 		9A7CE5F41E01A77C00EB7256 /* MusicBrainziPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBrainziPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7CE5F91E01A77C00EB7256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */,
 				9A7CE5F91E01A77C00EB7256 /* ViewController.swift */,
 				9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */,
+				9A30A8361E0454E200EF7673 /* TheTableViewController.swift */,
 				9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */,
 				9A7CE6001E01A77C00EB7256 /* LaunchScreen.storyboard */,
 				9A7CE6031E01A77C00EB7256 /* Info.plist */,
@@ -226,6 +229,7 @@
 				9A7CE5FA1E01A77C00EB7256 /* ViewController.swift in Sources */,
 				9A7CE5F81E01A77C00EB7256 /* AppDelegate.swift in Sources */,
 				9AF3458A1E01D64B00235AE4 /* Auth.swift in Sources */,
+				9A30A8371E0454E200EF7673 /* TheTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

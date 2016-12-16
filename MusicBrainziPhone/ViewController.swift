@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 //                let JSON = result
                 let data = JSON(result)
 //                let list = JSON["artist"] as! NSArray
-                print(data["artists"][0]["name"])
+                print(data["artists"][0])
             }
         }
     }
