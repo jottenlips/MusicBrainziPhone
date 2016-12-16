@@ -10,5 +10,7 @@ target 'MusicBrainziPhone' do
   pod 'Alamofire', '~> 4.0'
   pod 'NXOAuth2Client', '~> 1.2.8'
   pod 'SwiftyJSON'
-
+  pod "PromiseKit", "~> 4.0"
+  
+  
 end
