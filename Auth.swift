@@ -10,7 +10,7 @@ import Foundation
 import NXOAuth2Client
 import SwiftyJSON
 import Alamofire
-
+import PromiseKit
 
 
 class Auth{
@@ -29,11 +29,33 @@ class Auth{
                 //                let JSON = result
                 let data = JSON(result)
                 //                let list = JSON["artist"] as! NSArray
-                print(data["artists"].count)
+                print(data["artists"])
             }
         }
     }
     
+    func getJSON(searchTerm:String, searchType:String)->Promise<JSON>{
+       let query = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return Promise { fulfill, reject in
+        Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+query!).responseJSON { response in
+            
+            let serverResponse = response.response
+            if((serverResponse?.statusCode)! < 200 || (serverResponse?.statusCode)! > 299) {
+                let error = NSError(domain: "http", code: 123, userInfo: ["errorDescription":"Server answers with a wrong status."])
+                reject(error)
+            }
+
+            
+            if let result = response.result.value {
+                //                let JSON = result
+                let data = JSON(result)
+                //                let list = JSON["artist"] as! NSArray
+                
+                fulfill(data)
+                }
+            }
     
+        }
+    }
 
 }

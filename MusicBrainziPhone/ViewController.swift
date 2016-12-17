@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
-        Auth().getData(searchTerm: theSearchTerm, searchType: searchType)
+        let json = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType)
+        print(json)
         }
         print(self.searchField.text!)
     }
