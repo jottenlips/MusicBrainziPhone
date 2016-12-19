@@ -14,6 +14,10 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    //constants
+    let BASE_URL = "http://musicbrainz.org/ws/2/"
+    let format_query = "?fmt=json&query="
+    var theData = Auth().getJSON(searchTerm: "Prince", searchType: "artist")
     
     @IBOutlet weak var artistProducerSwitch: UISwitch!
     @IBOutlet weak var searchField: UITextField!
@@ -21,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var artistSwitch: UISwitch!
     @IBOutlet weak var albumSwitch: UISwitch!
     @IBOutlet weak var labelSwitch: UISwitch!
+    
     
     
     @IBAction func pressedSearchButton(_ sender: AnyObject) {
@@ -41,18 +46,26 @@ class ViewController: UIViewController {
         if let theSearchTerm = self.searchField.text{
         let json = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType)
         print(json)
+//        theData = json
         }
         print(self.searchField.text!)
     }
     
+   
     
-    let BASE_URL = "http://musicbrainz.org/ws/2/"
-    let format_query = "?fmt=json&query="
+    //structure to hold the json data and pass to the next view
+    struct theData{
+        let json:JSON
+    }
     
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // turn all switches off
+        albumSwitch.setOn(false, animated: true)
+        artistSwitch.setOn(false, animated: true)
+        labelSwitch.setOn(false, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
