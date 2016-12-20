@@ -45,30 +45,46 @@ class ViewController: UIViewController {
         }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
-        //self.thedata = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).value
-          
-            Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType)
-                .then
-                {
-                    (data) -> Void in
-                    self.thedata = data
-                }
-                .then{
-                    print(self.thedata)
-                
-                }
-                .catch
-                {
-                    (error) -> Void in
-                    print("error getting listenerCount from the server")
-            }
-            
+            getTheJSON(searchTerm:theSearchTerm, searchType: searchType)
         }
     }
     
-    //structure to hold the json data and pass to the next view
-    struct theData{
-        let json:JSON
+    
+    func getTheJSON(searchTerm: String, searchType: String)
+    {
+        //self.thedata = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).value
+        
+        Auth().getJSON(searchTerm: searchTerm, searchType: searchType)
+            .then
+            {
+                (data) -> Void in
+                self.thedata = data
+            }
+            .then{
+                print(self.thedata)
+                
+                
+            }
+            .catch
+            {
+                (error) -> Void in
+                print("error getting listenerCount from the server")
+        }
+        
+    }
+    
+    
+    
+//    //structure to hold the json data and pass to the next view
+//    struct theData{
+//        let json:JSON
+//    }
+//    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let data = self.thedata
+        if let destinationViewController = segue.destination as? TheTableViewController {
+            destinationViewController.data = data
+        }
     }
     
     override func viewDidLoad() {
