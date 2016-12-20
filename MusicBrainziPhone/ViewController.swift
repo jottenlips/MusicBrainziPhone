@@ -46,20 +46,26 @@ class ViewController: UIViewController {
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
         //self.thedata = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).value
-           
-           Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).then
+          
+            Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType)
+                .then
                 {
                     (data) -> Void in
                     self.thedata = data
+                }
+                .then{
+                    print(self.thedata)
+                
                 }
                 .catch
                 {
                     (error) -> Void in
                     print("error getting listenerCount from the server")
             }
-            print(thedata)
+            
         }
     }
+    
     //structure to hold the json data and pass to the next view
     struct theData{
         let json:JSON
