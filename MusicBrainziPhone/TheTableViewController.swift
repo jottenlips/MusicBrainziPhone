@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import PromiseKit
 
 class TheTableViewController: UITableViewController {
 
     var data = Auth().getJSON(searchTerm: "prince", searchType: "artist").value
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        reloadInputViews()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,7 +49,13 @@ class TheTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "test"
+        
+//        if let artist = self.data{
+//            cell.textLabel?.text = String(describing: artist)
+//        }
+        cell.textLabel?.text = String(describing: JSONData.json["artists"][indexPath.row]["name"])
+        
+        
         return cell
     }
  
