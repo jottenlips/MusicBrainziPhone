@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iwj-en-nIL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -88,6 +88,7 @@
                             <constraint firstItem="A3I-ID-cXz" firstAttribute="top" secondItem="aB8-SP-OmY" secondAttribute="bottom" constant="17" id="zKE-zE-Bkn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zey-2X-9cf"/>
                     <connections>
                         <outlet property="albumSwitch" destination="6Zz-Jr-Eeo" id="43x-TU-yfQ"/>
                         <outlet property="artistProducerSwitch" destination="P1Z-f5-SfL" id="ybC-cx-sYO"/>
@@ -98,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
+            <point key="canvasLocation" x="984.79999999999995" y="38.23088455772114"/>
         </scene>
         <!--The Table View Controller-->
         <scene sceneID="yJ4-8c-6sd">
@@ -110,7 +111,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NWQ-QC-ud7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NWQ-QC-ud7" id="Mh0-wp-nLl">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -126,7 +127,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8f-32-NVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="38"/>
+            <point key="canvasLocation" x="1804" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="caN-CQ-GYG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iwj-en-nIL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dOL-zq-woT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fim-5T-MJt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xy-XC-Cyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

@@ -12,12 +12,13 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import PromiseKit
 
 class ViewController: UIViewController {
     //constants
     let BASE_URL = "http://musicbrainz.org/ws/2/"
     let format_query = "?fmt=json&query="
-    var theData = Auth().getJSON(searchTerm: "Prince", searchType: "artist")
+    var thedata = Auth().getJSON(searchTerm: "Prince", searchType: "artist").value
     
     @IBOutlet weak var artistProducerSwitch: UISwitch!
     @IBOutlet weak var searchField: UITextField!
@@ -44,21 +45,26 @@ class ViewController: UIViewController {
         }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
-        let json = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType)
-        print(json)
-//        theData = json
+        //self.thedata = Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).value
+           
+           Auth().getJSON(searchTerm: theSearchTerm, searchType: searchType).then
+                {
+                    (data) -> Void in
+                    self.thedata = data
+                }
+                .catch
+                {
+                    (error) -> Void in
+                    print("error getting listenerCount from the server")
+            }
+            print(thedata)
         }
-        print(self.searchField.text!)
     }
-    
-   
-    
     //structure to hold the json data and pass to the next view
     struct theData{
         let json:JSON
     }
     
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         // turn all switches off
@@ -73,4 +79,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
 

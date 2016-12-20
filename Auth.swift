@@ -15,47 +15,53 @@ import PromiseKit
 
 class Auth{
     
-    func getData(searchTerm:String, searchType:String){
+    func getData(searchTerm:String, searchType:String)
+    {
         let query = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+query!).responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            //            if let JSON = response.result.value {
-            //                print("JSON: \(JSON)")
-            //            }
+            
             if let result = response.result.value {
-                //                let JSON = result
                 let data = JSON(result)
-                //                let list = JSON["artist"] as! NSArray
-                print(data["artists"])
+                print(data)
             }
         }
     }
     
-    func getJSON(searchTerm:String, searchType:String)->Promise<JSON>{
+    func getJSON(searchTerm:String, searchType:String)->Promise<JSON>
+    {
        let query = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         return Promise { fulfill, reject in
-        Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+query!).responseJSON { response in
-            
-            let serverResponse = response.response
-            if((serverResponse?.statusCode)! < 200 || (serverResponse?.statusCode)! > 299) {
-                let error = NSError(domain: "http", code: 123, userInfo: ["errorDescription":"Server answers with a wrong status."])
-                reject(error)
-            }
-
-            
-            if let result = response.result.value {
-                //                let JSON = result
-                let data = JSON(result)
-                //                let list = JSON["artist"] as! NSArray
-                
-                fulfill(data)
+            Alamofire.request("https://musicbrainz.org/ws/2/"+searchType+"/?fmt=json&query="+query!).validate(statusCode: 200..<300).responseJSON
+            { (response) -> Void in
+                switch response.result
+                {
+                case .success:
+                    if let result = response.result.value {
+                        fulfill(JSON(result))
+                    }
+                case .failure(let error):
+                    reject(error)
+                    
                 }
             }
-    
+
+            
         }
+    
     }
 
+
+
+
+//    func callGetJSON(searchTerm:String, searchType:String)->JSON
+//    {
+//        
+//        
+//        
+//    }
+    
 }
+
+
+
+
