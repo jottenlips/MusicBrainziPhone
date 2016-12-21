@@ -49,8 +49,12 @@ class TheTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        var theCount = 0
+        if let count = data{
+          theCount = count["artists"].count
+        }
       
-        return 25
+        return theCount
     }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
