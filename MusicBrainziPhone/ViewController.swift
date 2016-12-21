@@ -49,8 +49,9 @@ class ViewController: UIViewController {
         }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
-            
             getTheJSON(searchTerm:theSearchTerm, searchType: searchType)
+            performSegue(withIdentifier: "FirstSegue", sender: UIDevice.self)
+            
         }
     }
     
@@ -65,13 +66,13 @@ class ViewController: UIViewController {
                 (data) -> Void in
                 self.theData = data
                 JSONData.json = data
-                
+                print(data)
             }
-            .then{
-                print(self.theData)
-                
-                
-            }
+//            .then{
+//               // print(self.theData)
+//                
+//                
+//            }
             .catch
             {
                 (error) -> Void in
@@ -84,9 +85,9 @@ class ViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let data = self.theData
+        print("------b------", self.theData, "--------e------")
         if let destinationViewController = segue.destination as? TheTableViewController {
-            destinationViewController.data = data
+            destinationViewController.data = self.theData
         }
     }
     
