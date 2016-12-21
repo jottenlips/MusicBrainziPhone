@@ -13,19 +13,26 @@ import PromiseKit
 
 class TheTableViewController: UITableViewController {
 
-    var data = Auth().getJSON(searchTerm: "prince", searchType: "artist").value
+    @IBOutlet weak var theLabel: UILabel!
+    var data:JSON!
     
-  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        reloadInputViews()
+        
+        if let text = data{
+            theLabel.text = String(describing: text["artists"][0]["name"])
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,14 +54,17 @@ class TheTableViewController: UITableViewController {
     }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
 //        if let artist = self.data{
 //            cell.textLabel?.text = String(describing: artist)
 //        }
-        cell.textLabel?.text = String(describing: JSONData.json["artists"][indexPath.row]["name"])
         
+        if let artist = data{
+            cell.textLabel?.text = String(describing: artist["artists"][indexPath.row]["name"])
+        }
         
         return cell
     }

@@ -14,15 +14,13 @@ import Alamofire
 import SwiftyJSON
 import PromiseKit
 
-struct JSONData{
-   static var json=JSON("")
-}
+
 
 class ViewController: UIViewController {
     //globals
     let BASE_URL = "http://musicbrainz.org/ws/2/"
     let format_query = "?fmt=json&query="
-    var theData = Auth().getJSON(searchTerm: "Prince", searchType: "artist").value
+    var theData:JSON!
     
     @IBOutlet weak var artistProducerSwitch: UISwitch!
     @IBOutlet weak var searchField: UITextField!
@@ -50,9 +48,10 @@ class ViewController: UIViewController {
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
             getTheJSON(searchTerm:theSearchTerm, searchType: searchType)
-            performSegue(withIdentifier: "FirstSegue", sender: UIDevice.self)
+//            performSegue(withIdentifier: "FirstSegue", sender: UIDevice.self)
             
         }
+       
     }
     
     
@@ -65,8 +64,8 @@ class ViewController: UIViewController {
             {
                 (data) -> Void in
                 self.theData = data
-                JSONData.json = data
-                print(data)
+                print(self.theData)
+               // TheTableViewController().tableView.reloadData()
             }
 //            .then{
 //               // print(self.theData)
@@ -85,7 +84,7 @@ class ViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("------b------", self.theData, "--------e------")
+        print("------b------", "--------e------")
         if let destinationViewController = segue.destination as? TheTableViewController {
             destinationViewController.data = self.theData
         }
