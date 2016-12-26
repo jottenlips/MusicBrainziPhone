@@ -36,7 +36,6 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="pressedSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fsk-Yx-cDx"/>
-                                    <segue destination="60H-5i-1Wl" kind="show" identifier="FirstSegue" id="G9q-f1-x63"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1Z-f5-SfL">
@@ -72,10 +71,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-Vf-fZl">
-                                <frame key="frameInset" minX="67" minY="42" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,11 +90,12 @@
                         <outlet property="artistSwitch" destination="P1Z-f5-SfL" id="8rd-Mg-cZG"/>
                         <outlet property="labelSwitch" destination="Llq-z1-hE5" id="1ez-ps-vqe"/>
                         <outlet property="searchField" destination="aB8-SP-OmY" id="7pz-LZ-yVm"/>
+                        <segue destination="60H-5i-1Wl" kind="show" identifier="FirstSegue" id="DuC-ZD-tqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="38.23088455772114"/>
+            <point key="canvasLocation" x="985" y="38"/>
         </scene>
         <!--The Table View Controller-->
         <scene sceneID="yJ4-8c-6sd">

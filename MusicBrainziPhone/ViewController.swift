@@ -48,9 +48,10 @@ class ViewController: UIViewController {
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
             getTheJSON(searchTerm:theSearchTerm, searchType: searchType)
-//            performSegue(withIdentifier: "FirstSegue", sender: UIDevice.self)
+
             
         }
+        
        
     }
     
@@ -65,6 +66,8 @@ class ViewController: UIViewController {
                 (data) -> Void in
                 self.theData = data
                 print(self.theData)
+                self.performSegue(withIdentifier: "FirstSegue", sender: UIDevice.self)
+                
                // TheTableViewController().tableView.reloadData()
             }
 //            .then{
