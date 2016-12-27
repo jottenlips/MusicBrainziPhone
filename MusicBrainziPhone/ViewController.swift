@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     let BASE_URL = "http://musicbrainz.org/ws/2/"
     let format_query = "?fmt=json&query="
     var theData:JSON!
+    var searchType:String!
     
     @IBOutlet weak var artistProducerSwitch: UISwitch!
     @IBOutlet weak var searchField: UITextField!
@@ -35,14 +36,17 @@ class ViewController: UIViewController {
         var searchType = "artist"
         if (artistSwitch.isOn){
             searchType = "artist"
+            self.searchType = "artist"
             // call getdata, store JSON in a list variable
         }
         if (albumSwitch.isOn){
             searchType = "release-group"
+            self.searchType = "release-group"
             // call getdata, store JSON in a list variable
         }
         if (labelSwitch.isOn){
             searchType = "label"
+            self.searchType = "label"
             // call getdata, store JSON in a list variable
         }
         print("button pressed")
@@ -90,6 +94,7 @@ class ViewController: UIViewController {
         print("------b------", "--------e------")
         if let destinationViewController = segue.destination as? TheTableViewController {
             destinationViewController.data = self.theData
+            destinationViewController.searchType = self.searchType
         }
     }
     

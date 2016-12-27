@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MusicBrainziPhone/ViewController.swift"
-            timestampString = "504476406.666149"
+            timestampString = "504552622.094721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "pressedSearchButton(_:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -15,13 +15,12 @@ class TheTableViewController: UITableViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     var data:JSON!
+    var searchType:String!
+    var searchTerm:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let text = data{
-            theLabel.text = String(describing: text["artists"][0]["name"])
-        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,10 +48,26 @@ class TheTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+    
+        
         var theCount = 0
-        if let count = data{
-          theCount = count["artists"].count
+        if(self.searchType == "artist"){
+            if let artist = data{
+                theCount = artist["artists"].count
+            }
         }
+        else if (self.searchType=="label"){
+            if let labels = data{
+                theCount = labels["labels"].count
+            }
+        }
+        else{
+            if let releases = data{
+                theCount = releases["releases"].count
+            }
+        }
+        
+       
       
         return theCount
     }
@@ -65,9 +80,20 @@ class TheTableViewController: UITableViewController {
 //        if let artist = self.data{
 //            cell.textLabel?.text = String(describing: artist)
 //        }
-        
+        if(self.searchType == "artist"){
         if let artist = data{
             cell.textLabel?.text = String(describing: artist["artists"][indexPath.row]["name"])
+        }
+        }
+        else if (self.searchType=="label"){
+            if let labels = data{
+            cell.textLabel?.text = String(describing: labels["labels"][indexPath.row]["name"])
+            }
+        }
+        else{
+            if let releases = data{
+                cell.textLabel?.text = String(describing: releases["release-groups"]["releases"][indexPath.row]["title"])
+            }
         }
         
         return cell
