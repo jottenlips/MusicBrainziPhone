@@ -44,10 +44,27 @@ class Auth{
                     
                 }
             }
-
-            
         }
-    
+    }
+    func getAlbumsFromArtist(mbid:String) -> Promise<JSON>
+    {
+        return Promise { fulfill, reject in
+            Alamofire.request("http://musicbrainz.org/ws/2/artist/"+mbid+"?inc=recordings&fmt=json").validate(statusCode: 200..<300).responseJSON
+                { (response) -> Void in
+                    switch response.result
+                    {
+                    case .success:
+                        if let result = response.result.value {
+                            fulfill(JSON(result))
+                        }
+                    case .failure(let error):
+                        reject(error)
+                        
+                    }
+            }
+        }
+
+        
     }
 
 

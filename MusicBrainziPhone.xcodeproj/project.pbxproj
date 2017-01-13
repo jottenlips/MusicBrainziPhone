@@ -13,6 +13,7 @@
 		9A7CE5FD1E01A77C00EB7256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */; };
 		9A7CE5FF1E01A77C00EB7256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */; };
 		9A7CE6021E01A77C00EB7256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CE6001E01A77C00EB7256 /* LaunchScreen.storyboard */; };
+		9A9FE97D1E292F13002530D6 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE97C1E292F13002530D6 /* DetailedViewController.swift */; };
 		9AF3458A1E01D64B00235AE4 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF345891E01D64B00235AE4 /* Auth.swift */; };
 		AD830C3BB9717B4AA736E4FB /* Pods_MusicBrainziPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B1B460D8D3E4CEAF2121AC /* Pods_MusicBrainziPhone.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7CE6011E01A77C00EB7256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A7CE6031E01A77C00EB7256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9FE97C1E292F13002530D6 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		9AF345891E01D64B00235AE4 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A1C13A9478448660F13FF0D0 /* Pods-MusicBrainziPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBrainziPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBrainziPhone/Pods-MusicBrainziPhone.release.xcconfig"; sourceTree = "<group>"; };
 		F3B1B460D8D3E4CEAF2121AC /* Pods_MusicBrainziPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBrainziPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				9A7CE5F71E01A77C00EB7256 /* AppDelegate.swift */,
 				9A7CE5F91E01A77C00EB7256 /* ViewController.swift */,
 				9A7CE5FB1E01A77C00EB7256 /* Main.storyboard */,
+				9A9FE97C1E292F13002530D6 /* DetailedViewController.swift */,
 				9A30A8361E0454E200EF7673 /* TheTableViewController.swift */,
 				9A7CE5FE1E01A77C00EB7256 /* Assets.xcassets */,
 				9A7CE6001E01A77C00EB7256 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 			files = (
 				9A7CE5FA1E01A77C00EB7256 /* ViewController.swift in Sources */,
 				9A7CE5F81E01A77C00EB7256 /* AppDelegate.swift in Sources */,
+				9A9FE97D1E292F13002530D6 /* DetailedViewController.swift in Sources */,
 				9AF3458A1E01D64B00235AE4 /* Auth.swift in Sources */,
 				9A30A8371E0454E200EF7673 /* TheTableViewController.swift in Sources */,
 			);
