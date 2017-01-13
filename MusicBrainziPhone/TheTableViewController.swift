@@ -21,6 +21,9 @@ class TheTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.theLabel.text = searchType + " " + searchTerm
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,6 +35,9 @@ class TheTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        NSLog("You selected cell #\(indexPath.row, "row!!!")!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,12 +69,10 @@ class TheTableViewController: UITableViewController {
         }
         else{
             if let releases = data{
-                theCount = releases["releases"].count
+                theCount = releases["release-groups"].count
             }
         }
-        
-       
-      
+
         return theCount
     }
 
@@ -83,7 +87,9 @@ class TheTableViewController: UITableViewController {
         if(self.searchType == "artist"){
         if let artist = data{
             cell.textLabel?.text = String(describing: artist["artists"][indexPath.row]["name"])
-        }
+            cell.detailTextLabel?.text = String(describing: artist["artists"][indexPath.row]["type"])+" "+String( describing: artist["artists"][indexPath.row]["life-span"]["begin"])
+
+            }
         }
         else if (self.searchType=="label"){
             if let labels = data{
@@ -92,13 +98,17 @@ class TheTableViewController: UITableViewController {
         }
         else{
             if let releases = data{
-                cell.textLabel?.text = String(describing: releases["release-groups"]["releases"][indexPath.row]["title"])
+                cell.textLabel?.text = String(describing: releases["release-groups"][indexPath.row]["releases"][0]["title"])
             }
         }
         
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+    }
 
     /*
     // Override to support conditional editing of the table view.

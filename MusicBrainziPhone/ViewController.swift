@@ -38,16 +38,22 @@ class ViewController: UIViewController {
             searchType = "artist"
             self.searchType = "artist"
             // call getdata, store JSON in a list variable
+            albumSwitch.setOn(false, animated: true)
+            labelSwitch.setOn(false, animated: true)
         }
         if (albumSwitch.isOn){
             searchType = "release-group"
             self.searchType = "release-group"
             // call getdata, store JSON in a list variable
+            artistSwitch.setOn(false, animated: true)
+            labelSwitch.setOn(false, animated: true)
         }
         if (labelSwitch.isOn){
             searchType = "label"
             self.searchType = "label"
             // call getdata, store JSON in a list variable
+            albumSwitch.setOn(false, animated: true)
+            artistSwitch.setOn(false, animated: true)
         }
         print("button pressed")
         if let theSearchTerm = self.searchField.text{
